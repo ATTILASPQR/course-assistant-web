@@ -1,0 +1,21 @@
+const tg = window.Telegram.WebApp;
+tg.expand();
+
+document.getElementById('submitBtn').addEventListener('click', () => {
+    const path = window.location.pathname;
+    let data = {};
+
+    if (path === '/form.html') {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        if (!name || !phone) return alert('Заполните поля');
+        data = { action: "contact", name, phone };
+    } else {
+        const goal = document.getElementById('goal').value;
+        const level = document.getElementById('level').value;
+        data = { action: "select", goal, level };
+    }
+
+    tg.sendData(JSON.stringify(data));
+    tg.close();
+});
