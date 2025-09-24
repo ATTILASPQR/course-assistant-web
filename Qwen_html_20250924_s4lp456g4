@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подбор курса</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🎯 Подберём курс за 30 секунд</h2>
+        <label>Цель обучения?</label>
+        <select id="goal">
+            <option value="career">Сменить профессию</option>
+            <option value="upgrade">Повысить квалификацию</option>
+            <option value="hobby">Для хобби</option>
+        </select>
+        <label>Ваш уровень?</label>
+        <select id="level">
+            <option value="beginner">Новичок</option>
+            <option value="middle">Есть база</option>
+            <option value="pro">Опытный</option>
+        </select>
+        <button id="submitBtn">Подобрать →</button>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
